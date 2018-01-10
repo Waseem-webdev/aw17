@@ -1,0 +1,927 @@
+<link rel="stylesheet" type="text/css" href="/templates/blacks.co.uk/_css/slick.css">
+
+  <style type="text/css">
+
+/* ---- NAVIGATION FIXED MENU -----*/
+      
+       .menu-nav {
+    top: 60px;
+    left: 0;
+    position: fixed;
+    list-style-type: none;
+    font-size: 30px;
+    font-weight: 700;
+    margin-top: 10px;
+    margin-left: 15px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    line-height:45px;
+  }
+
+  .menu-nav a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .menu-nav li {
+    display: inline-block;
+  }
+      
+      
+      @media(max-width: 1200px) {
+         .menu-nav {
+      list-style-type: none;
+      font-size: 20px;
+      font-weight: 700;
+      margin-top: 0px;
+      margin-left: 0px;
+      padding: 0px;
+      z-index: 10;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      max-width: 400px;
+      top:55px;
+      left: auto;
+      flex-wrap: wrap;
+    }
+    .menu-nav a {
+      padding: 0px 10px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .menu-nav li {
+      display: inline;
+    }
+  }
+      
+       .menu-nav li {
+      font-size: 125%;
+      padding: 0 0vw;
+    }
+      
+      
+/* --- CSS STYLE OVERRIDES --- */
+
+body {
+    background-color: unset; 
+      }
+           
+#contentSection {
+    z-index: 0; 
+}
+
+.set-page-width {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.wrap{ margin:0 auto;}
+.box1{ text-align:center;overflow: hidden;}
+.box1 img{ position: relative; width:26%; padding-top: 65px;}
+
+img {
+    display: unset;
+}
+      
+@media screen and (max-device-width: 760px){
+#bgvid, #vidpause, #vidmute, #eq {
+    display: unset;
+}
+    }
+      
+      /* -------   SITE STYLES --------- */
+ 
+    .btn-main {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-bottom:50px;
+}
+.button-main {
+    background-color: transparent;
+    color: #fff;
+    z-index: 3;
+    border-radius: 30px;
+    text-align: center;
+    font-size:100%;
+    outline:0;
+    padding:20px;
+    border: 1px solid #fff;
+}
+
+
+.button-main:hover {
+    background-color: #9f9d2c;
+}      
+      
+ h2{
+    text-align: center;
+    border: 0;
+    margin: 0;
+    padding-top: 40px;
+    font-size: 250%;
+      }     
+      
+.overlay1{
+background-color: rgba(0,0,0,0);
+text-align: center;
+line-height: 0;
+background-image: url("https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/AutmnBackgroundHeader.jpg");
+background-size: cover; 
+
+  
+}
+
+.overlay2{
+background-color: rgba(0,0,0,0.5);
+overflow:hidden;
+}
+
+.overlay3{
+background-image: url("https://www.blacks.co.uk/templates/blacks.co.uk/aw17/AUTUMN-background-new.jpg");
+background-size: 100% 100%;
+}
+
+.overlay4{
+    background-color: rgba(0,0,0,0.5);
+    overflow:hidden;
+}
+      
+.overlay5{
+background-image: url("https://www.blacks.co.uk/templates/blacks.co.uk/aw17/AUTUMN-background-new.jpg");
+background-size: 100% 100%;
+}
+
+.overlay6{
+background-color: rgba(158,157,45,1);
+/*overflow:hidden;*/
+text-align:center;
+}
+
+
+
+video {
+    position: absolute;  
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -100;
+    transform: translateX(0%) translateY(0%);
+    background-size: cover;
+    transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+
+
+#polina {
+    background: rgba(0,0,0,0.3);
+    position:relative;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+#polina button {
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none;
+  margin: 1rem auto;
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s background;
+  display:none;
+}
+#polina button:hover {
+   background: rgba(0,0,0,0.5);
+}
+
+      
+      .button {
+    width: 125px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: #3a3619;
+    border: 0;
+    color: #fff;
+    font-size: 100%;
+    outline:0;
+}
+
+ 
+/* -- slider styles -----*/
+    .slider {
+    width: 50%;
+    margin: 35px auto;    
+    }
+
+    .slick-slide {
+      margin: 0px 20px;
+    }
+
+    .slick-slide img {
+      width: 100%;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+color:rgba(168,157,44,1);
+    }
+
+
+    .slick-slide {
+      transition: all ease-in-out .3s;
+      opacity: .2;
+    }
+
+    .slick-active {
+      opacity: .5;
+    }
+
+    .slick-current {
+      opacity: 1;
+    }
+
+
+/* --- CONTENT SECTION -------*/
+.page_content{
+margin: 0 auto;
+max-width: 1280px;
+width: 100%;
+}
+ .section1, .section2, .section3, .section4{
+display: block;
+height: 380px;
+padding: 10px;
+}
+
+
+.section_right_img img{
+ position: absolute;
+ max-width:550px;
+ max-height:333px;
+ margin-left: 6%;
+ margin-top:20px;
+}
+
+
+.section_left_img img{
+    position: relative;
+    max-width: 550px;
+    max-height: 333px;
+    right: 6%;
+    float: right;
+    margin-top:25px;
+}
+      
+    .copy_text {
+    margin-top: 141px;
+    position: relative;
+    max-width: 50%;
+    float: right;
+    background-color: #2a2a2a;
+    padding: 20px;
+    opacity: 0.8;
+    font-size: 110%;
+}
+      
+
+.copy_text2{
+    margin-right: 281px;
+    padding: 10px;
+    margin-top: 141px;
+    z-index: 2;
+    max-width: 50%;
+    background-color: #2a2a2a;
+    padding: 20px;
+    opacity: 0.8;
+    font-size: 110%;
+}
+
+          
+
+/*  ----------- STORY SECTION STYLES --------- */
+
+      
+      .story-box{
+              margin-bottom: 35px;
+    display: inline-block;
+    width: 15%;
+    padding: 2%;
+      }
+
+
+.story-rounded{border-radius:100%;}
+
+                      
+      
+@media(min-width:720px) {
+ .mobile-header {
+display:none;
+    }
+  }
+      
+@media(max-width:720px) {
+ .desktop-header {
+display:none;
+    }
+  }   
+      
+@media(max-width:720px) {
+ .box1 img {
+width:80%;
+margin-top: 30px;
+    }
+  }    
+      
+@media(max-width:680px) {
+ .btn-main {
+    margin-bottom: 1%;
+    }
+  }  
+
+@media(min-width:1920px) {
+ .btn-main {
+     padding-bottom:3%;
+    }
+  }  
+      
+      
+   @media(max-width:680px) {
+ .menu-nav li {
+ font-size:3vw;
+    }
+  }  
+  
+@media screen and (min-width:720px) {
+ #mobile-slider {
+display:none;
+    }
+  }
+      
+@media screen and (max-width:720px) {
+ #desktop-slider {
+display:none;
+
+    }
+  }        
+   
+   
+ @media(max-width:720px) {
+ .slider {
+width:70%;
+    }
+  } 
+@media(max-width:420px) {
+ .slider {
+width:70%;
+margin:20px auto;
+    }
+  } 
+      
+ @media(max-width:720px) {
+ .page_content {
+ display:none;
+    }
+  }  
+      
+@media(max-width:1120px) {
+ .copy_text2 {
+ position:absolute;
+    }
+  }        
+      
+ @media(max-width:720px) {
+ .section1, .section2, .section3, .section4{
+ height:unset;
+    }
+  }  
+      
+ @media(min-width:720px) {
+ .page_content2 {
+ display:none;
+    }
+  }  
+   
+ @media(max-width:1180px) {
+ .story-box {
+width:40%;
+    }
+  }       
+ 
+       @media(max-width:670px) {
+ .story-box {
+width:80%;
+    }
+  }     
+      
+      
+
+
+     
+
+/*---------- UPDATE CSS FOR SLIDER ARROWS --------*/
+   .slick-prev, .slick-next, .slick-arrow{
+    opacity: 1;
+} 
+
+      
+      /* ---------- FOOTER STYLES ------------ */
+      
+      #get-involved {
+          background-color: unset;}
+      
+      #get-involved img {
+          max-width: 33px;
+       }
+      
+      #footer #get-involved ul{
+          width:100%;
+      }
+      #footer {
+        background: #3c3e42;
+        border-top: none;
+       }
+      
+      #footer #get-involved ul {
+          border-bottom: 0;
+      }
+      
+       /* ------- DEV SITE OVERIDE ------- */
+      
+      body > img {display:none;}
+      
+      /* ----------------------- */
+  </style>
+
+<div class="wrap">
+
+  <div class ="box1 overlay1">
+  <!-- MENU NAV FIXED --> 
+ <ul class="menu-nav">
+    <a class="menu-link" href="#Mens">
+      <li>Mens</li>
+    </a>
+    <a class="menu-link" href="#Womens">
+      <li>Womens</li>
+    </a>
+    <a class="menu-link" href="#stories">
+      <li>Stories</li>
+    </a>
+  </ul>
+
+      
+ <a href="https://www.blacks.co.uk/ni:view-new-in-items/">
+     <div class = "desktop-header">
+           <img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/Autumn-Desktop-Overlay.png"
+         alt="Autumn - A New Path To Follow"/></div>
+      <div class = "mobile-header">
+              <img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/Autumn-Mobile-Overlay.png"
+         alt="Autumn - A New Path To Follow"/></div>
+      <div class="btn-main"> <a href="https://www.blacks.co.uk/ni:view-new-in-items/"><button class="button-main">Shop Autumn Winter Now</button></a></div>
+</div>
+    <div class="box2 overlay2" id ="Mens">
+      <div id="polina">
+
+<video poster="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/mens-back.jpg" id="bgvid" playsinline autoplay muted loop>
+<source src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/videos/mensnew.mp4" type="video/mp4">
+<source src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/videos/mensnew.webm" type="video/webm">
+</video>
+<button>Pause</button>
+</div>
+
+ <h2>Mens</h2>
+        
+<!-- Desktop Slider -->        
+  <section class="lazy slider" id ="desktop-slider">
+      <div>
+ <a href="https://www.blacks.co.uk/mens/286256-jack-wolfskin-men-s-helium-jacket-grey.html">
+     
+         <img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-mens.png"
+         alt="JACK WOLFSKIN Men’s Helium Jacket"/>
+          </a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/mens/285318-berghaus-men-s-fellmaster-gore-tex-jacket-dark-red.html">
+          <img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-mens2.png"   alt="BERGHAUS Men’s Fellmaster GORE-TEX® Jacket"/></a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/mens/287974-the-north-face-men-s-canyonlands-full-zip-fleece-dark-grey.html"><img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-mens3.png"  alt="THE NORTH FACE Men’s Canyonlands Full Zip Fleece"/> </a>
+    </div>
+    <div>
+       <a href="https://www.blacks.co.uk/footwear/275311-the-north-face-men-s-hedgehog-gore-tex-black.html"><img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-tnf-hedgehog.png" alt="THE NORTH FACE Men’s Hedgehog GORE-TEX® Boots"/></a>
+    </div>
+
+ </section>
+        
+        
+        
+  <!-- MObile View Slider -->
+        
+    <section class="lazy slider" id = "mobile-slider">
+      <div>
+ <a href="https://www.blacks.co.uk/mens/286256-jack-wolfskin-men-s-helium-jacket-grey.html"><img src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/mens-slider1-mobile2.png" alt="JACK WOLFSKIN Men’s Helium Jacket"/> 
+    </a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/mens/285318-berghaus-men-s-fellmaster-gore-tex-jacket-dark-red.html"><img src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/mens-slider2-mobile.png"
+         alt="BERGHAUS Men’s Fellmaster GORE-TEX® Jacket"/>
+    </a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/mens/287974-the-north-face-men-s-canyonlands-full-zip-fleece-dark-grey.html"><img src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/mens-slider3-mobile.png"
+         alt="THE NORTH FACE Men’s Canyonlands Full Zip Fleece"/>
+        </a>
+    </div>
+    <div>
+       <a href="https://www.blacks.co.uk/footwear/275311-the-north-face-men-s-hedgehog-gore-tex-black.html"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/mens-slider4-mobile.png"
+         alt="THE NORTH FACE Men’s Hedgehog GORE-TEX® Boots"/></a>
+    </div>
+
+ </section>
+    
+
+</div>
+<div class = "box3 overlay3" >
+<div class ="page_content">
+   
+<div class="section1">
+<div class="section_right_img"><a href="https://www.blacks.co.uk/mens/mens-clothing/jackets-coats/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/jacketsmens.png"
+         alt="Men's Jackets"/></a></div>
+<div class = "copy_text">
+<p>Our range of men's jackets for autumn and winter is purpose built to ward off the worst possible weather, whilst keeping you light and fast on your feet.</p>
+
+</div>
+</div>
+<!-- /section1 -->
+
+
+<div class="section2">
+<div class="section_left_img" ><a href="https://www.blacks.co.uk/mens/mens-footwear/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/mensfootwear2.png"
+         alt="Men's Footwear"/></a></div>
+<div class = "copy_text2">
+<p>Any terrain, any time - that was our remit for selecting Autumn and Winter footwear for 2017. We have the shoes and boots that provide underfoot assurance and protection in abundance.</p>
+</div>
+</div>
+<!-- /section2 -->
+
+
+<div class="section3">
+<div class="section_right_img" ><a href="https://www.blacks.co.uk/mens/mens-clothing/fleece/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/videos/mensfleecenew.png"
+         alt="Men's Fleece"/> </a></div>
+<div class = "copy_text">
+<p>The fleece is a pivotal part of any autumnal or winter wardrobe, acting as an outer layer to begin with, before becoming a core part of any weather beating ensemble.</p>
+</div>
+</div>
+<!-- /section3 -->
+
+
+<div class="section4">
+<div class="section_left_img" ><a href="https://www.blacks.co.uk/equipment/rucksacks-bags/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/menspacks.png"
+         alt="Packs"/></a></div>
+<div class = "copy_text2">
+    <p>From town to trail to travel, our bags and packs have got your back. This season, we've collected the best daysacks, rucksacks, holdalls and hydration packs that optimise carrying comfort, no matter the cargo.</p>
+</div>
+</div>
+<!-- /section4 -->
+
+</div>
+<!-- /page_content -->
+    
+    
+    
+    <!-- Page Conetent 2 -->
+    
+    <div class ="page_content2" id = "Mens">
+<div class="section1">
+<div class="section-img" ><a href="https://www.blacks.co.uk/mens/mens-clothing/jackets-coats/ni:view-new-in-items/"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/jacketsmens.png"
+         alt="Men's Jackets"/></a></div>
+
+<p>Our range of men's jackets for autumn and winter is purpose built to ward off the worst possible weather, whilst keeping you light and fast on your feet.</p>
+
+</div>
+<!-- /section1 -->
+
+
+<div class="section2">
+<div class="section-img" ><a href="https://www.blacks.co.uk/mens/mens-footwear/ni:view-new-in-items/"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/mensfootwear2.png"
+         alt="Men's Footwear"/></a></div>
+
+<p>Any terrain, any time - that was our remit for selecting Autumn and Winter footwear for 2017. We have the shoes and boots that provide underfoot assurance and protection in abundance.</p>
+</div>
+<!-- /section2 -->
+
+
+<div class="section3">
+<div class="section-img" ><a href="https://www.blacks.co.uk/mens/mens-clothing/fleece/ni:view-new-in-items/"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/videos/mensfleecenew.png"
+         alt="Men's Fleece"/> </a></div>
+
+<p>The fleece is a pivotal part of any autumnal or winter wardrobe, acting as an outer layer to begin with, before becoming a core part of any weather beating ensemble.</p>
+</div>
+<!-- /section3 -->
+
+
+<div class="section4">
+<div class="section-img" ><a href="https://www.blacks.co.uk/equipment/rucksacks-bags/ni:view-new-in-items/"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/menspacks.png"
+         alt="Packs"/> </a></div>
+
+<p>From town to trail to travel, our bags and packs have got your back. This season, we've collected the best daysacks, rucksacks, holdalls and hydration packs that optimise carrying comfort, no matter the cargo.</p>
+</div>
+<!-- /section4 -->
+
+</div>
+<!-- /page_content2 -->
+    
+    
+</div>
+    
+<!-- Overlay3 Box 3 -->
+    
+    
+    
+    
+    <!--    WOMENS SECTION STARTS HERE  -->
+    
+       <div class="box4 overlay4" id ="Womens">
+      <div id="polina">
+
+<video poster="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/womens-back.jpg" id="bgvid" playsinline autoplay muted loop>
+<source src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/videos/womensnew.mp4" type="video/mp4">
+<source src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/videos/womensnew.webm" type="video/webm">
+</video>
+<button>Pause</button>
+</div>
+ <h2>Womens</h2>
+           
+    <!-- Desktop Slider -->
+  <section class="lazy slider" id ="desktop-slider">
+      <div>
+    <a href="https://www.blacks.co.uk/womens/287499-jack-wolfskin-women-s-richmond-long-jacket-navy.html"> <img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-womens-new.png" alt="JACK WOLFSKIN Women’s Richmond Long Jacket"/>
+        </a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/womens/287708-the-north-face-women-s-stratos-jacket-purple.html"><img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-tnf-stratos.png"
+         alt="THE NORTH FACE Women’s Stratos Jacket"/></a>
+    </div>
+    <div>
+     <a href="https://www.blacks.co.uk/s:sprayway+kiso/?search=sprayway+kiso"><img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-womens3.png"
+         alt="SPRAYWAY Women’s Kiso Half-Zip Fleece"/></a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/footwear/275314-the-north-face-women-s-hedgehog-gore-tex-boots-mid-grey.html"><img data-lazy="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/slider-tnf-womens-hedgehog.png"
+         alt="THE NORTH FACE Women’s Hedgehog GORE-TEX® Boots"/></a>
+    </div>
+
+ </section>
+           
+           
+        <!-- Mobile View Slider -->
+  <section class="lazy slider" id = "mobile-slider">
+      <div>
+    <a href="https://www.blacks.co.uk/womens/287499-jack-wolfskin-women-s-richmond-long-jacket-navy.html"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/womens-slider1-mobile.png"
+         alt="JACK WOLFSKIN Women’s Richmond Long Jacket"/></a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/womens/287708-the-north-face-women-s-stratos-jacket-purple.html"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/womens-slider2-mobile.png"
+         alt="THE NORTH FACE Women’s Stratos Jacket"/></a>
+    </div>
+    <div>
+     <a href="https://www.blacks.co.uk/s:sprayway+kiso/?search=sprayway+kiso"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/womens-slider3mobile.png"
+         alt="SPRAYWAY Women’s Kiso Half-Zip Fleece"/> </a>
+    </div>
+    <div>
+      <a href="https://www.blacks.co.uk/footwear/275314-the-north-face-women-s-hedgehog-gore-tex-boots-mid-grey.html"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/Sliders/womens-slider4-mobile.png"
+         alt="THE NORTH FACE Women’s Hedgehog GORE-TEX® Boots"/></a>
+    </div>
+
+ </section>
+           
+
+</div>
+<div class = "box5 overlay5" >
+<div class ="page_content">
+    
+<div class="section1">
+<div class="section_right_img" ><a href="https://www.blacks.co.uk/womens/womens-clothing/jackets-coats/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/womensjackets.png"
+         alt="Women's Jackets"/></a></div>
+<div class = "copy_text">
+<p>For everyone who dares to tread new ground there is the potential for great reward. Prepare yourself for the new season and the challenges it brings with a selection of jackets that balance protection and comfort.</p>
+</div>
+</div>
+<!-- /section1 -->
+
+
+<div class="section2">
+<div class="section_left_img" >
+<a href="https://www.blacks.co.uk/womens/womens-clothing/fleece/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/womensfleece.png"
+         alt="Women's Fleece"/></a></div>
+<div class = "copy_text2">
+<p>When all of the other fair-weather hikers have turned back, pull out a technical fleece or cosy knit and savour the isolation and tranquility of a ridge all to oneself.</p>
+</div>
+</div>
+<!-- /section2 -->
+
+
+<div class="section3">
+<div class="section_right_img" ><a href="https://www.blacks.co.uk/footwear/womens-footwear/ni:view-new-in-items/"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/womensfootwear.png"
+         alt="Women's Footwear"/></a></div>
+<div class = "copy_text">
+<p>From the trail to the town the newest footwear range introduces technical shoes and boots from adidas, The North Face, Merrell and more, with each piece selected for comfort and stability, step after step.</p>
+</div>
+</div>
+<!-- /section3 -->
+
+
+
+</div>
+<!-- /page_content -->
+    
+
+    
+    <!-- Page Content 2 Womens -->
+    
+    <div class ="page_content2" id ="Womens" >
+<div class="section1">
+<div class="section-img" ><a href="https://www.blacks.co.uk/womens/womens-clothing/jackets-coats/ni:view-new-in-items/"><img src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/womensjackets.png"
+         alt="Women's Jackets"/></a></div>
+
+<p><span class="more">One of our favourite times of year, Autumn gives us the opportunity to test our dedication and challenge our readiness for new adventures. For everyone who dares to tread new ground there is the potential for great reward. Prepare yourself for the new season and the challenges it brings with a layering system which balances protection and comfort.</span></p>
+
+</div>
+<!-- /section1 -->
+
+
+<div class="section2">
+<div class="section-img" ><a href="https://www.blacks.co.uk/womens/womens-clothing/fleece/ni:view-new-in-items/"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/womensfleece.png"
+         alt="Women's Fleece"/></a></div>
+
+<p><span class = "more">Stay warm and dry with seasonal knits and fleeces from the likes of Berghaus and Jack Wolfskin and when all the other fair-weather hikers have turned back, pull out your insulating layer and savour the isolation and tranquility of a ridge all to oneself.</span></p>
+</div>
+<!-- /section2 -->
+
+
+<div class="section3">
+<div class="section-img"><a href="https://www.blacks.co.uk/footwear/womens-footwear/ni:view-new-in-items/"><img 
+         src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/womensfootwear.png"
+         alt="Women's Footwear"/></a></div>
+
+<p><span class = "more">Functionality, comfort and style - from the trail to the town the newest footwear range introduces technical footwear from adidas and The North Face with each piece selected to reflect a demanding lifestyle.</span></p>
+</div>
+<!-- /section3 -->
+
+
+</div>
+<!-- /page_content2 -->
+    
+    
+</div>
+    
+<!-- Overlay3 Box 3 -->
+    
+    
+
+  <div class="box6 switch overlay6" id="stories">
+      <div class = "story-box">
+          <a href="https://www.blacks.co.uk/blog/2017/08/jackets_coats_buying_guide/?main_site=1"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/jacketgifnew.gif"
+         alt="Buying Guide: Jackets and Coats"/></a>
+        <h3>Buying Guide: Jackets and Coats</h3>
+            <p>So it’s time to invest in a new jacket, but what type do you need? How much should you spend? All these questions and more will be answered in this easy guide.</p>
+            <button class="button"><a href="https://www.blacks.co.uk/blog/2017/08/jackets_coats_buying_guide/?main_site=1">Read Now</a></button>
+          </a>
+        </div>
+      
+      
+      <div class = "story-box">
+        <a href="https://www.blacks.co.uk/blog/2017/08/the-best-of-ospreys-autumn-winter-2017-collection/?main_site=1"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/osprey-1.png"
+         alt="The Best of Osprey's Autumn/Winter 2017 Collection"/></a>
+       <h3>The Best of Osprey's Autumn/Winter 2017 Collection</h3>
+            <p>We review our favourite bags from the new Autumn/Winter Osprey collection including the Trillium, Fairview and Transporter. Three bags for Three very different adventures.</p>
+            <button class="button"><a href="https://www.blacks.co.uk/blog/2017/08/the-best-of-ospreys-autumn-winter-2017-collection/?main_site=1">Read Now</a></button>
+          </a>
+        </div>
+      
+      
+      
+      <div class = "story-box"><a href="https://www.blacks.co.uk/blog/2017/08/introducing-the-2017-autumn-winter-hiking-boots-collection/?main_site=1"><img class="b-lazy story-rounded" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/footweargifnew.gif"
+         alt="Introducing The 2017 Autumn/Winter Hiking Boot Collection"/></a>
+        <h3>Introducing The 2017 Autumn/Winter Hiking Boot Collection</h3>
+            <p>Raining? Muddy? Fear not - there's still hope! We review three of our favourite hiking boots from the new 2017 Autumn/Winter footwear range.</p>
+            <button class="button"><a href="https://www.blacks.co.uk/blog/2017/08/introducing-the-2017-autumn-winter-hiking-boots-collection/?main_site=1">Read Now</a></button>
+          </a>
+        </div>
+    
+    
+       <div class = "story-box"><a href="https://www.blacks.co.uk/blog/2017/09/new-season-new-kit-our-autumn-winter-favourites/?main_site=1"><img class="b-lazy" 
+         src=data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==
+         data-src="https://www.blacks.co.uk/templates/blacks.co.uk/aw17/mens/montaneblog.png"
+         alt="New Season, New Kit - Our Autumn/Winter Favourites"/></a>
+        <h3>New Season, New Kit - Our Autumn/Winter Favourites</h3>
+            <p>Our new range looks to provide unrivalled protection in all conditions. We’ve picked out a few of our favourite pieces and put them at the forefront.</p>
+            <button class="button"><a href="https://www.blacks.co.uk/blog/2017/09/new-season-new-kit-our-autumn-winter-favourites/?main_site=1">Read Now</a></button>
+          </a>
+        </div>
+
+    </div>
+
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+<script src="/templates/blacks.co.uk/_js/slick.min.js"></script>
+
+<script>
+ $(document).on('ready', function() {
+     $.noConflict();
+      ;(function() {
+            // Initialize
+            var bLazy = new Blazy();
+        })();
+  
+     
+     // SLIDER 
+      $(".lazy").slick({
+        lazyLoad: 'ondemand', // ondemand progressive anticipated
+        //  dots: true,
+          fade: false,
+         autoplay:true,
+        infinite: true
+      });
+        });
+      </script>
+
+      <script>
+var vid = document.getElementById("bgvid");
+var pauseButton = document.querySelector("#polina button");
+
+if (window.matchMedia('(prefers-reduced-motion)').matches) {
+    vid.removeAttribute("autoplay");
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+}
+
+function vidFade() {
+  vid.classList.add("stopfade");
+}
+
+vid.addEventListener('ended', function()
+{
+// only functional if "loop" is removed
+vid.pause();
+// to capture IE10
+vidFade();
+});
+
+
+pauseButton.addEventListener("click", function() {
+  vid.classList.toggle("stopfade");
+  if (vid.paused) {
+    vid.play();
+    pauseButton.innerHTML = "Pause";
+  } else {
+    vid.pause();
+    pauseButton.innerHTML = "Paused";
+  }
+})     
+                 
+    </script>
